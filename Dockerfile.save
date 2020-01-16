@@ -1,0 +1,11 @@
+FROM ubuntu:18.04
+RUN apt-get update && apt-get install -y nano git build-essential wget ocaml-nox build-essential
+RUN git RUN cd ./packer && make dev
+RUN cd ./packer && make dev
+
+wed
+
+clone https://github.com/bcpierce00/unison.git && cd unison && NATIVE=true make
+RUN cp ./unison/unison /usr/local/bin
+RUN cp ./unison/unison-fsmonitor /usr/local/bin
+COPY ./build_aws_image.sh /home/ubuntu/

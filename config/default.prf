@@ -1,0 +1,7 @@
+# default.prf
+root = /home/ec2-user/hippo/
+root = ssh://ubuntu@ec2-54-219-175-200.us-west-1.compute.amazonaws.com//home/ubuntu/hippo/
+ignore = Name {.*,*,*/,.*/}.git
+ignore = Name node_modules
+ignore = Name \.git
+perms=0o0000
