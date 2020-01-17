@@ -11,7 +11,7 @@ bash-local:
 	docker run -it $(IMAGE_NAME) bin/bash
 
 create-aws-image:
-	docker run -it $(IMAGE_NAME) packer build -var 'aws_access_key=AKIAJGMTEPHZGO3K6HPA' -var 'aws_secret_key=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' /home/ubuntu/aws-image-template.json
+	docker run -it $(IMAGE_NAME) packer build -var 'aws_access_key=' -var 'aws_secret_key=' /home/ubuntu/aws-image-template.json
 
 sync-ssh:
 	cat ~/.ssh/id_rsa.pub | ssh -i ~/Downloads/luisync.pem $(INSTANCE_LOGIN) "cat - >> ~/.ssh/authorized_keys"

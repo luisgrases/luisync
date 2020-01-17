@@ -27,6 +27,11 @@
     {
       "type": "shell",
       "script": "/home/ubuntu/serverconfig.sh"
+    },
+    {
+      "type": "file",
+      "source": "/unison",
+      "destination": "/unison"
     }
   ]
 }
