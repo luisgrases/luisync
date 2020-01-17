@@ -1,6 +1,10 @@
 # default.prf
-root = /home/ec2-user/hippo/
-root = ssh://ubuntu@ec2-54-219-175-200.us-west-1.compute.amazonaws.com//home/ubuntu/hippo/
+# Path on the docker container
+root = /home/ubuntu/project/
+
+# Path on the aws instance
+root = ssh://ubuntu@ec2-3-82-233-242.compute-1.amazonaws.com//home/ubuntu/project/
+
 ignore = Name {.*,*,*/,.*/}.git
 ignore = Name node_modules
 ignore = Name \.git
