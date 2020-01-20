@@ -3,9 +3,9 @@ RUN apt-get update && apt-get install -y nano git build-essential wget ocaml-nox
 COPY ./packer_1.5.1_linux_amd64.zip ./
 RUN unzip ./packer_1.5.1_linux_amd64.zip
 RUN mv packer /usr/local/bin
-ADD ./unison ./unison
-RUN cd ./unison && NATIVE=true make
-RUN cp ./unison/src/unison /usr/local/bin
-RUN cp ./unison/src/unison-fsmonitor /usr/local/bin
-COPY ./aws-image-template.json /home/ubuntu/
-COPY ./serverconfig.sh /home/ubuntu/
+COPY ./unison.zip /home/ubuntu/unison.zip
+RUN unzip /home/ubuntu/unison.zip
+RUN cd /unison-master && NATIVE=true make
+RUN cp /unison-master/src/unison /usr/local/bin
+RUN cp /unison-master/src/unison-fsmonitor /usr/local/bin
+RUN chmod 777 /home/ubuntu/unison.zip

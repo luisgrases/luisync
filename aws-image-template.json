@@ -25,13 +25,13 @@
   ],
   "provisioners": [
     {
-      "type": "shell",
-      "script": "/home/ubuntu/serverconfig.sh"
+      "type": "file",
+      "source": "home/ubuntu/unison.zip",
+      "destination": "/home/ubuntu/unison.zip"
     },
     {
-      "type": "file",
-      "source": "/unison",
-      "destination": "/unison"
+      "type": "shell",
+      "script": "/home/ubuntu/serverconfig.sh"
     }
   ]
 }

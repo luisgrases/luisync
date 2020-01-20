@@ -1,11 +1,5 @@
 # default.prf
-# Path on the docker container
-root = /home/ubuntu/project/
-
-# Path on the aws instance
-root = ssh://ubuntu@ec2-3-82-233-242.compute-1.amazonaws.com//home/ubuntu/project/
-
 ignore = Name {.*,*,*/,.*/}.git
-ignore = Name node_modules
+ignore = Name {.*,*,*/,.*/}.log
 ignore = Name \.git
 perms=0o0000
