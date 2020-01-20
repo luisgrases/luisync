@@ -35,6 +35,7 @@ make create-aws-image
 ```
 
 Now that we have the AMI, you can now launch an EC2 instance using this image. Check the following [link](https://aws.amazon.com/premiumsupport/knowledge-center/launch-instance-custom-ami/) with instructions on how to do so.  
+
 Once the instance has launched, get it's public DNS and fill the `INSTANCE_DNS` variable in the Makefile. The public DNS looks something like this: `ec2-54-237-51-165.compute-1.amazonaws.com`
 
 Let's proceed to sync our local ssh keys to this newly created instance. To do so, just call the following command:
@@ -43,7 +44,7 @@ Let's proceed to sync our local ssh keys to this newly created instance. To do s
 make sync-ssh-keys 
 ```
 
-Now you are ready to start syncing your files. But before you do that. Fill the `PROJECT_FULL_PATH` variable on the Makefile. As its name indicates. This is the full path of the folder to be synced. For example: ~/harbor/portal-api
+Now you are ready to start syncing your files. But before you do that. Fill the `PROJECT_FULL_PATH` variable on the Makefile. As its name indicates, this is the full path of the folder to be synced. For example: ~/harbor/portal-api
 After you have set the `PROJECT_FULL_PATH` variable, call the following command:
 
 ```
